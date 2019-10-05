@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: $font-primary-medium;
+  background: #F8FCFF;
+}
+
+body {
+  position: relative;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0 0 10px;
+  padding: 0;
+  color: $primary-color;
+}
+
+h1, h2 {
+  font-size: 32px;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p,
+span {
+  font-family: $font-primary-light;
+  color: $primary-color;
+}
+
+button {
+  font-family: $font-primary-light;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: $primary-color;
+  transition: .3s ease-in-out;
+}
+
+main,
+header,
+footer {
+  max-width: 1900px;
+  margin: auto;
+}
+
+.unvisible {
+  visibility: hidden;
+}
+
+.bg-white {
+  background: #fff;
+}

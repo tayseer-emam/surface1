@@ -1,0 +1,324 @@
+.hero {
+  text-align: center;
+
+  p {
+    font-size: 13px;
+  }
+
+  .car-details {
+    margin: 60px auto 0;
+    padding-top: 14px;
+    background: linear-gradient(180deg, #21AACB 0%, #5F56D9 100%);
+    position: relative;
+    width: 1000px;
+
+    &__option {
+      position: absolute;
+      width: 23px;
+      height: 23px;
+      background: url(/images/plus.svg) no-repeat;
+
+      &:nth-of-type(1) {
+        top: 36%;
+        left: 29%;
+      }
+      &:nth-of-type(2) {
+        top: 50%;
+        left: 23%;
+      }
+      &:nth-of-type(3) {
+        top: 55%;
+        left: 58%;
+      }
+      &:nth-of-type(4) {
+        top: 25%;
+        left: 75%;
+      }
+
+      &:focus {
+        .car-details__card {
+          visibility: visible;
+        }
+      }
+    }
+
+    &__card {
+      width: 170px;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      top: -76px;
+      left: -73px;
+      visibility: hidden;
+
+      &__img {
+        background: #fff;
+        padding: 13px 10px;
+        border-radius: 10px 0 0 10px;
+      }
+
+      &__info {
+        flex-grow: 1;
+        background: #368DD0;
+        border-radius: 0 10px 10px 0;
+        padding: 12px 10px;
+
+        p {
+          font-size: 12px;
+          margin: 0;
+          text-align: left;
+          color: #fff;
+        }
+      }
+
+      &::after {
+        content: '';
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 20px solid #368DD0;
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+.app-info {
+  padding-top: 68px;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  max-width: 1140px;
+  margin: 0 auto;
+
+  &__details {
+    margin: 0 70px;
+  }
+}
+
+.app-features {
+  padding: 58px 0;
+  display: flex;
+
+  > div {
+    margin-left: 44px;
+
+    p {
+      width: 50%;
+    }
+  }
+
+  &__header {
+    margin: 20px 0 60px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__list li {
+    position: relative;
+    padding-left: 20px;
+    flex: 1 1 50%;
+    margin-bottom: 37px;
+  }
+
+  &__list li::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(180deg, #3095CE 0%, #5A5DD8 100%);
+    box-shadow: 1px 3px 10px 2px #CCDFF6;
+    position: absolute;
+    border-radius: 50%;
+    left: 0;
+    top: 4px;
+  }
+
+  &__list h4 {
+    font-size: 15px;
+  }
+
+  &__list p {
+    font-size: 12px;
+    width: 50%;
+    line-height: 21px;
+  }
+}
+
+.app-download {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  width: 950px;
+  margin: auto;
+  padding-top: 45px;
+
+  p {
+    font-size: 12px;
+    line-height: 21px;
+    margin-bottom: 20px;
+  }
+}
+
+.card {
+  width: 40%;
+  background: #fff;
+  border-radius: 5px;
+  margin: 30px auto 0;
+  box-shadow: 0 2px 9px 0 rgba(227,237,248,0.63);
+  padding: 30px 60px 45px;
+  text-align: center;
+
+  &__title {
+    font-size: 17px;
+  }
+
+  &__subtitle {
+    font-size: 12px;
+  }
+
+  &__form {
+    background: #F8FCFF;
+    border-radius: 5px;
+    border: 1px solid #CAD9E3;
+    width: 80%;
+    padding: 5px;
+    margin: 18px auto 0;
+    display: flex;
+    height: 52px;
+
+    input {
+      flex-grow: 1;
+      border: none;
+      outline: none;
+      padding: 0 20px;
+    }
+
+    button {
+      background: #0272BC;
+      border-radius: 5px;
+      color: #fff;
+      padding: 10px 32px;
+      font-size: 14px;
+    }
+  }
+}
+
+.useful-links {
+  width: 40%;
+  margin: 44px auto 0;
+  display: flex;
+  justify-content: space-between;
+
+  .col-header {
+    font-size: 12px;
+    margin-bottom: 20px;
+    color: #515151;
+  }
+
+  li:not(.col-header),
+  a {
+    font-size: 11px;
+    font-family: $font-primary-light;
+    color: #999999;
+    margin-bottom: 8px;
+    line-height: 21px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .burger-menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  section,
+  .car-details {
+    width: 100% !important;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .card,
+  .useful-links {
+    width: 65% !important;
+  }
+
+  .app-features {
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .app-info img,
+  .app-features img {
+    width: 40%;
+  }
+
+  .app-download {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section,
+  .app-info {
+    flex-direction: column;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &__details {
+      margin: 0;
+    }
+  }
+
+  .app-info img,
+  .app-features img {
+    width: 100%;
+  }
+
+  .app-features {
+    div {
+      margin: 10px 10px 30px;
+
+      p{
+        width: 100%;
+      }
+    }
+
+    &__list li {
+      flex: 1 1 100%;
+    }
+  }
+
+  .app-download {
+
+    &__options {
+      margin-bottom: 40px;
+      width: 100%;
+      text-align: center;
+    }
+
+    p {
+      width: 100%;
+    }
+  }
+
+  .card {
+    width: 100% !important;
+    padding: 30px 5px 45px;
+
+    &__form {
+      width: 100%;
+    }
+  }
+
+  .useful-links {
+    text-align: center;
+  }
+}

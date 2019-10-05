@@ -1,0 +1,37 @@
+
+.footer {
+  border-top: 1px solid #E0F3FF;
+  padding: 20px 60px 30px;
+  font-family: $font-primary-light;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  img {
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+
+  a,
+  span {
+    color: #707070;
+  }
+}
+
+.copyright a {
+  margin-left: 42px;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+  }
+
+  .copyright a,
+  .copyright span {
+    display: block;
+    margin: 10px 0;
+    text-align: center
+  }
+}
